@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Practice </title>
+    <style>
+        /* Basic styling for better presentation */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: darkgrey;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        fieldset {
+            margin-bottom: 15px;
+            padding: 15px;
+            border: 1px solid #ddd;
+        }
+        legend {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HTML5 Practice Document</h1>
+    </header>
+
+    <main>
+        <!-- Ordered List with Roman Numerals -->
+        <section>
+            <h2>Ordered List (Roman Numerals)</h2>
+            <ol type="I">
+                <li>First item</li>
+                <li>Second item</li>
+                <li>Third item</li>
+                <li>Fourth item</li>
+            </ol>
+        </section>
+
+        <!-- External Image from Pexels -->
+        <section>
+            <h2>External Image</h2>
+            <figure>
+                <img src="image.jpg" 
+                     alt="Beautiful landscape from Pexels" 
+                     width="600" height="400">
+                <figcaption>Sample image from Pexels.com</figcaption>
+            </figure>
+        </section>
+
+        <!-- Contacts Table -->
+        <section>
+            <h2>Contacts Table</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Mobile</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tracy Beryl</td>
+                        <td>123 Main St, toronto</td>
+                        <td>0701234567</td>
+                        <td>tracybee@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>Serfine Omolla</td>
+                        <td>456 Oak Ave, ontario</td>
+                        <td>0765745321</td>
+                        <td>serfine@gmail.com</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>Beryl Atieno</td>
+                        <td>789 Mpaka Rd, westland</td>
+                        <td>555-0303</td>
+                        <td>beryl@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>James Brown</td>
+                        <td>310 Mbithi Rd, parklands</td>
+                        <td>0719385678</td>
+                        <td>james@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>Mitchell Davis</td>
+                        <td>654 Maple Ln, hungary</td>
+                        <td>0712345665</td>
+                        <td>mitchell@gmail.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Registration Form -->
+        <section>
+            <h2>Registration Form</h2>
+            <form id="registration" method="post">
+                <!-- Basic Information Fieldset -->
+                <fieldset>
+                    <legend>Basic Information</legend>
+                    
+                    <div>
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" 
+                               placeholder="Enter your full name" 
+                               required 
+                               minlength="3">
+                    </div>
+                    
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" 
+                               placeholder="your.email@example.com" 
+                               required>
+                    </div>
+                    
+                    <div>
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" 
+                               placeholder="Create a password" 
+                               required 
+                               minlength="8"
+                               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                               title="Must contain at least one number, one uppercase and lowercase letter, and at least 8 characters">
+                    </div>
+                    
+                    <div>
+                        <label for="dob">Date of Birth:</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                </fieldset>
+
+                <!-- Additional Information Fieldset -->
+                <fieldset>
+                    <legend>Additional Information</legend>
+                    
+                    <div>
+                        <label for="country">Country:</label>
+                        <select id="country" name="country" required>
+                            <option value="" disabled selected>Select your country</option>
+                            <option value="us">Tanzania</option>
+                            <option value="ca">India</option>
+                            <option value="uk">South Africa</option>
+                            <option value="au">Kenya</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label>Subscription Plan:</label>
+                        <div>
+                            <input type="radio" id="plan-basic" name="plan" value="basic" required>
+                            <label for="plan-basic">Basic</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="plan-premium" name="plan" value="premium">
+                            <label for="plan-premium">Premium</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="plan-enterprise" name="plan" value="enterprise">
+                            <label for="plan-enterprise">Enterprise</label>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label>Interests (select all that apply):</label>
+                        <div>
+                            <input type="checkbox" id="interest-music" name="interests" value="music">
+                            <label for="interest-music">Music</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="interest-sports" name="interests" value="sports">
+                            <label for="interest-sports">Sports</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="interest-movies" name="interests" value="movies">
+                            <label for="interest-movies">Movies</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <button type="submit">Register</button>
+            </form>
+        </section>
+
+        <!-- Multimedia Section -->
+        <section>
+            <h2>Multimedia Elements</h2>
+            
+            <h3>Audio Player</h3>
+            <audio controls>
+                <source src="spring-forest.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            
+            <h3>Video Player</h3>
+            <video  controls width="780" height="480" >
+                <source src="play.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 HTML5 Practice. All rights reserved.</p>
+    </footer>
+</body>
+</html>
